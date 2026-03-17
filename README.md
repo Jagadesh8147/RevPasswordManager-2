@@ -202,7 +202,3 @@ http://localhost:8147
 Java Full Stack Developer
 
 ---
-
-# ⭐ Support
-
-If you like this project, please ⭐ the repository.
