@@ -1,0 +1,749 @@
+2026-03-11 00:15:01.989 [main] INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.revpasswordmanager.RevPasswordmanagerApplicationTests]: RevPasswordmanagerApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-11 00:15:02.200 [main] INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.revpasswordmanager.RevPasswordmanagerApplicationTests]: RevPasswordmanagerApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-11 00:15:03.696 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - === Setting up SecurityControllerTest ===
+2026-03-11 00:15:03.696 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - TEST: getSecurityAudit_validUserId_returnsAuditReport
+2026-03-11 00:15:03.771 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - PASS: weak=3, reused=1, old=2
+2026-03-11 00:15:03.787 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - === Setting up SecurityControllerTest ===
+2026-03-11 00:15:03.787 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - TEST: verifyCode_invalidCode_returns400
+2026-03-11 00:15:03.788 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - PASS
+2026-03-11 00:15:03.796 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - === Setting up SecurityControllerTest ===
+2026-03-11 00:15:03.797 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - TEST: getSecurityQuestions_validUserId_returnsOkWithQuestions
+2026-03-11 00:15:03.798 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - PASS: 3 questions returned
+2026-03-11 00:15:03.805 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - === Setting up SecurityControllerTest ===
+2026-03-11 00:15:03.806 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - TEST: updateSecurityAnswer_validInput_returns200
+2026-03-11 00:15:03.811 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - PASS
+2026-03-11 00:15:03.820 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - === Setting up SecurityControllerTest ===
+2026-03-11 00:15:03.821 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - TEST: generateVerificationCode_validRequest_returnsCode
+2026-03-11 00:15:03.822 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - PASS: code returned in body
+2026-03-11 00:15:03.836 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - === Setting up SecurityControllerTest ===
+2026-03-11 00:15:03.836 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - TEST: updateSecurityAnswer_emptyAnswer_returns400
+2026-03-11 00:15:03.844 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - PASS
+2026-03-11 00:15:03.851 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - === Setting up SecurityControllerTest ===
+2026-03-11 00:15:03.852 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - TEST: verifyCode_validCode_returns200
+2026-03-11 00:15:03.853 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - PASS
+2026-03-11 00:15:04.327 [main] INFO  com.revpasswordmanager.RevPasswordmanagerApplicationTests - TEST: Application context smoke test — PASS
+2026-03-11 00:15:04.671 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - === Setting up AuthServiceImplTest ===
+2026-03-11 00:15:04.685 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - TEST: registerUser_duplicateEmail_throwsException
+2026-03-11 00:15:04.686 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Registration attempt — username: [john_doe], email: [john@example.com]
+2026-03-11 00:15:04.689 [main] WARN  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Registration failed — email already exists: [john@example.com]
+2026-03-11 00:15:04.696 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - === Setting up AuthServiceImplTest ===
+2026-03-11 00:15:04.696 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - TEST: changeMasterPassword_wrongCurrent_throwsException
+2026-03-11 00:15:04.697 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Change master password request — username: [john_doe]
+2026-03-11 00:15:04.699 [main] WARN  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Change password failed — current password incorrect for username: [john_doe]
+2026-03-11 00:15:04.706 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - === Setting up AuthServiceImplTest ===
+2026-03-11 00:15:04.706 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - TEST: registerUser_passwordIsEncoded_notPlaintext
+2026-03-11 00:15:04.713 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Registration attempt — username: [john_doe], email: [john@example.com]
+2026-03-11 00:15:04.716 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Registration successful — userId: [100], username: [john_doe]
+2026-03-11 00:15:04.730 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - PASS
+2026-03-11 00:15:04.735 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - === Setting up AuthServiceImplTest ===
+2026-03-11 00:15:04.735 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - TEST: login_validCredentials_with2FA_returnsNegativeOne
+2026-03-11 00:15:04.746 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Login attempt — username: [john_doe]
+2026-03-11 00:15:04.747 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - 2FA required — generating verification code for userId: [100]
+2026-03-11 00:15:04.748 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - PASS: 2FA triggered, returned -1
+2026-03-11 00:15:04.753 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - === Setting up AuthServiceImplTest ===
+2026-03-11 00:15:04.754 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - TEST: changeMasterPassword_correctCurrent_updatesHash
+2026-03-11 00:15:04.755 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Change master password request — username: [john_doe]
+2026-03-11 00:15:04.756 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Master password changed successfully — username: [john_doe]
+2026-03-11 00:15:04.757 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - PASS
+2026-03-11 00:15:04.760 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - === Setting up AuthServiceImplTest ===
+2026-03-11 00:15:04.760 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - TEST: login_userNotFound_throwsException
+2026-03-11 00:15:04.761 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Login attempt — username: [ghost]
+2026-03-11 00:15:04.761 [main] WARN  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Login failed — user not found: [ghost]
+2026-03-11 00:15:04.765 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - === Setting up AuthServiceImplTest ===
+2026-03-11 00:15:04.766 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - TEST: registerUser_validData_savesUserAndQuestions
+2026-03-11 00:15:04.769 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Registration attempt — username: [john_doe], email: [john@example.com]
+2026-03-11 00:15:04.770 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Registration successful — userId: [100], username: [john_doe]
+2026-03-11 00:15:04.772 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - PASS
+2026-03-11 00:15:04.776 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - === Setting up AuthServiceImplTest ===
+2026-03-11 00:15:04.777 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - TEST: toggleTwoFactor_disable_setsFalse
+2026-03-11 00:15:04.777 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Toggle 2FA request — username: [john_doe], enable: [false]
+2026-03-11 00:15:04.780 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - 2FA status updated — username: [john_doe], twoFactorEnabled: [false]
+2026-03-11 00:15:04.781 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - PASS
+2026-03-11 00:15:04.790 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - === Setting up AuthServiceImplTest ===
+2026-03-11 00:15:04.791 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - TEST: login_validCredentials_no2FA_returnsUserId
+2026-03-11 00:15:04.792 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Login attempt — username: [john_doe]
+2026-03-11 00:15:04.793 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Login successful — userId: [100], username: [john_doe]
+2026-03-11 00:15:04.793 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - PASS: userId=100
+2026-03-11 00:15:04.800 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - === Setting up AuthServiceImplTest ===
+2026-03-11 00:15:04.800 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - TEST: login_wrongPassword_throwsException
+2026-03-11 00:15:04.801 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Login attempt — username: [john_doe]
+2026-03-11 00:15:04.802 [main] WARN  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Login failed — invalid password for username: [john_doe]
+2026-03-11 00:15:04.808 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - === Setting up AuthServiceImplTest ===
+2026-03-11 00:15:04.809 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - TEST: registerUser_duplicateUsername_throwsException
+2026-03-11 00:15:04.809 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Registration attempt — username: [john_doe], email: [john@example.com]
+2026-03-11 00:15:04.810 [main] WARN  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Registration failed — username already exists: [john_doe]
+2026-03-11 00:15:04.815 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - === Setting up AuthServiceImplTest ===
+2026-03-11 00:15:04.815 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - TEST: toggleTwoFactor_enable_setsTrue
+2026-03-11 00:15:04.816 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Toggle 2FA request — username: [john_doe], enable: [true]
+2026-03-11 00:15:04.818 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - 2FA status updated — username: [john_doe], twoFactorEnabled: [true]
+2026-03-11 00:15:04.819 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - PASS
+2026-03-11 00:15:04.826 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - === Setting up PasswordGeneratorServiceImplTest ===
+2026-03-11 00:15:04.827 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - TEST: generatePassword_excludeSimilarChars_nonePresent
+2026-03-11 00:15:04.869 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [100], strength: [Very Strong]
+2026-03-11 00:15:04.874 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [100], strength: [Very Strong]
+2026-03-11 00:15:04.884 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [100], strength: [Very Strong]
+2026-03-11 00:15:04.893 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [100], strength: [Very Strong]
+2026-03-11 00:15:04.896 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [100], strength: [Very Strong]
+2026-03-11 00:15:04.899 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [100], strength: [Very Strong]
+2026-03-11 00:15:04.902 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [100], strength: [Very Strong]
+2026-03-11 00:15:04.906 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [100], strength: [Very Strong]
+2026-03-11 00:15:04.908 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [100], strength: [Very Strong]
+2026-03-11 00:15:04.911 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [100], strength: [Very Strong]
+2026-03-11 00:15:04.911 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - PASS: no similar chars in 10 passwords
+2026-03-11 00:15:04.913 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - === Setting up PasswordGeneratorServiceImplTest ===
+2026-03-11 00:15:04.914 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - TEST: generateMultiple_allUnique
+2026-03-11 00:15:04.914 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Generating [10] passwords — length: [20]
+2026-03-11 00:15:04.916 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [20], strength: [Very Strong]
+2026-03-11 00:15:04.917 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [20], strength: [Very Strong]
+2026-03-11 00:15:04.918 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [20], strength: [Very Strong]
+2026-03-11 00:15:04.919 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [20], strength: [Very Strong]
+2026-03-11 00:15:04.919 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [20], strength: [Very Strong]
+2026-03-11 00:15:04.920 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [20], strength: [Very Strong]
+2026-03-11 00:15:04.922 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [20], strength: [Strong]
+2026-03-11 00:15:04.923 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [20], strength: [Very Strong]
+2026-03-11 00:15:04.924 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [20], strength: [Very Strong]
+2026-03-11 00:15:04.924 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [20], strength: [Very Strong]
+2026-03-11 00:15:04.926 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - PASS
+2026-03-11 00:15:04.928 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - === Setting up PasswordGeneratorServiceImplTest ===
+2026-03-11 00:15:04.928 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - TEST: generatePassword_length64_exactLength
+2026-03-11 00:15:04.930 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [64], strength: [Very Strong]
+2026-03-11 00:15:04.930 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - PASS
+2026-03-11 00:15:04.932 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - === Setting up PasswordGeneratorServiceImplTest ===
+2026-03-11 00:15:04.933 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - TEST: checkStrength_medium_returnsMediumOrStrong
+2026-03-11 00:15:04.934 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - PASS: strength=Medium
+2026-03-11 00:15:04.936 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - === Setting up PasswordGeneratorServiceImplTest ===
+2026-03-11 00:15:04.936 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - TEST: generateMultiple_count5_returnsFive
+2026-03-11 00:15:04.937 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Generating [5] passwords — length: [16]
+2026-03-11 00:15:04.938 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [16], strength: [Very Strong]
+2026-03-11 00:15:04.939 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [16], strength: [Very Strong]
+2026-03-11 00:15:04.940 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [16], strength: [Very Strong]
+2026-03-11 00:15:04.941 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [16], strength: [Very Strong]
+2026-03-11 00:15:04.942 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [16], strength: [Very Strong]
+2026-03-11 00:15:04.944 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - PASS
+2026-03-11 00:15:04.945 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - === Setting up PasswordGeneratorServiceImplTest ===
+2026-03-11 00:15:04.946 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - TEST: generatePassword_numbersOnly_onlyDigits
+2026-03-11 00:15:04.947 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [16], strength: [Medium]
+2026-03-11 00:15:04.947 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - PASS
+2026-03-11 00:15:04.949 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - === Setting up PasswordGeneratorServiceImplTest ===
+2026-03-11 00:15:04.949 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - TEST: generatePassword_length8_exactLength
+2026-03-11 00:15:04.950 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [8], strength: [Strong]
+2026-03-11 00:15:04.950 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - PASS
+2026-03-11 00:15:04.952 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - === Setting up PasswordGeneratorServiceImplTest ===
+2026-03-11 00:15:04.952 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - TEST: generatePassword_noTypesSelected_throwsException
+2026-03-11 00:15:04.953 [main] WARN  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generation failed — no character types selected
+2026-03-11 00:15:04.954 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - === Setting up PasswordGeneratorServiceImplTest ===
+2026-03-11 00:15:04.955 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - TEST: checkStrength_null_returnsWeak
+2026-03-11 00:15:04.956 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - PASS
+2026-03-11 00:15:04.958 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - === Setting up PasswordGeneratorServiceImplTest ===
+2026-03-11 00:15:04.959 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - TEST: generatePassword_twoCalls_differentPasswords
+2026-03-11 00:15:04.960 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [20], strength: [Very Strong]
+2026-03-11 00:15:04.961 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [20], strength: [Very Strong]
+2026-03-11 00:15:04.961 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - PASS
+2026-03-11 00:15:04.963 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - === Setting up PasswordGeneratorServiceImplTest ===
+2026-03-11 00:15:04.963 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - TEST: checkStrength_simplePassword_weak
+2026-03-11 00:15:04.964 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - PASS
+2026-03-11 00:15:04.965 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - === Setting up PasswordGeneratorServiceImplTest ===
+2026-03-11 00:15:04.965 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - TEST: generatePassword_uppercaseOnly_onlyUppercase
+2026-03-11 00:15:04.966 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [20], strength: [Medium]
+2026-03-11 00:15:04.967 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - PASS: password=IUJULNWQBIYRCCBJOROQ
+2026-03-11 00:15:04.969 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - === Setting up PasswordGeneratorServiceImplTest ===
+2026-03-11 00:15:04.969 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - TEST: generatePassword_length12_exactLength
+2026-03-11 00:15:04.971 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [12], strength: [Strong]
+2026-03-11 00:15:04.971 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - PASS: length=12
+2026-03-11 00:15:04.972 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - === Setting up PasswordGeneratorServiceImplTest ===
+2026-03-11 00:15:04.973 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - TEST: checkStrength_complexLong_strongOrVeryStrong
+2026-03-11 00:15:04.974 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - PASS: strength=Very Strong
+2026-03-11 00:15:05.180 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - === Setting up VaultServiceImplTest ===
+2026-03-11 00:15:05.181 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - TEST: addVaultEntry_matchesMasterPassword_throwsException
+2026-03-11 00:15:05.181 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Adding vault entry — userId: [1], accountName: [Gmail]
+2026-03-11 00:15:05.183 [main] WARN  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Vault entry rejected — password matches master password for userId: [1]
+2026-03-11 00:15:05.187 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - === Setting up VaultServiceImplTest ===
+2026-03-11 00:15:05.187 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - TEST: addVaultEntry_validDTO_savesEntry
+2026-03-11 00:15:05.189 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Adding vault entry — userId: [1], accountName: [Gmail]
+2026-03-11 00:15:05.261 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Vault entry added successfully — userId: [1], account: [Gmail]
+2026-03-11 00:15:05.262 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - PASS
+2026-03-11 00:15:05.266 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - === Setting up VaultServiceImplTest ===
+2026-03-11 00:15:05.266 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - TEST: markAsFavorite_setsFalse
+2026-03-11 00:15:05.267 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Updating favorite status — entryId: [10], favorite: [false]
+2026-03-11 00:15:05.268 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Favorite status updated — entryId: [10], isFavorite: [false]
+2026-03-11 00:15:05.269 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - PASS
+2026-03-11 00:15:05.271 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - === Setting up VaultServiceImplTest ===
+2026-03-11 00:15:05.272 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - TEST: addVaultEntry_tooShortPassword_throwsException
+2026-03-11 00:15:05.272 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Adding vault entry — userId: [1], accountName: [Gmail]
+2026-03-11 00:15:05.273 [main] WARN  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Vault entry rejected — password too short (length: 3)
+2026-03-11 00:15:05.275 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - === Setting up VaultServiceImplTest ===
+2026-03-11 00:15:05.276 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - TEST: getAllEntries_twoEntries_returnsTwo
+2026-03-11 00:15:05.277 [main] ERROR com.revpasswordmanager.serviceimpl.VaultServiceImpl - Decryption failed for entryId: [null] — returning raw value
+2026-03-11 00:15:05.280 [main] ERROR com.revpasswordmanager.serviceimpl.VaultServiceImpl - Decryption failed for entryId: [null] — returning raw value
+2026-03-11 00:15:05.280 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Returned [2] vault entries for userId: [1]
+2026-03-11 00:15:05.281 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - PASS: 2 entries returned
+2026-03-11 00:15:05.285 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - === Setting up VaultServiceImplTest ===
+2026-03-11 00:15:05.285 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - TEST: addVaultEntry_duplicateEntry_throwsException
+2026-03-11 00:15:05.287 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Adding vault entry — userId: [1], accountName: [Gmail]
+2026-03-11 00:15:05.288 [main] WARN  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Duplicate vault entry blocked — userId: [1], account: [Gmail], username: [john@gmail.com]
+2026-03-11 00:15:05.290 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - === Setting up VaultServiceImplTest ===
+2026-03-11 00:15:05.290 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - TEST: markAsFavorite_invalidId_throwsException
+2026-03-11 00:15:05.290 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Updating favorite status — entryId: [999], favorite: [true]
+2026-03-11 00:15:05.291 [main] ERROR com.revpasswordmanager.serviceimpl.VaultServiceImpl - Favorite update failed — entry not found: [999]
+2026-03-11 00:15:05.294 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - === Setting up VaultServiceImplTest ===
+2026-03-11 00:15:05.294 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - TEST: getAllEntries_noEntries_returnsEmptyList
+2026-03-11 00:15:05.296 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Returned [0] vault entries for userId: [99]
+2026-03-11 00:15:05.296 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - PASS
+2026-03-11 00:15:05.300 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - === Setting up VaultServiceImplTest ===
+2026-03-11 00:15:05.300 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - TEST: addVaultEntry_emptyPassword_throwsException
+2026-03-11 00:15:05.300 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Adding vault entry — userId: [1], accountName: [Gmail]
+2026-03-11 00:15:05.301 [main] WARN  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Vault entry rejected — password is empty
+2026-03-11 00:15:05.303 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - === Setting up VaultServiceImplTest ===
+2026-03-11 00:15:05.304 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - TEST: markAsFavorite_setsTrue
+2026-03-11 00:15:05.305 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Updating favorite status — entryId: [10], favorite: [true]
+2026-03-11 00:15:05.305 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Favorite status updated — entryId: [10], isFavorite: [true]
+2026-03-11 00:15:05.306 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - PASS
+2026-03-11 00:15:05.308 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - === Setting up VaultServiceImplTest ===
+2026-03-11 00:15:05.309 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - TEST: getFavoriteEntries_hasFavorites_returnsOne
+2026-03-11 00:15:05.310 [main] ERROR com.revpasswordmanager.serviceimpl.VaultServiceImpl - Decryption failed for entryId: [null] — returning raw value
+2026-03-11 00:15:05.310 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Returned [1] favorite entries for userId: [1]
+2026-03-11 00:15:05.310 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - PASS
+2026-03-11 00:15:05.312 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - === Setting up VaultServiceImplTest ===
+2026-03-11 00:15:05.313 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - TEST: deleteVaultEntry_validId_callsRepository
+2026-03-11 00:15:05.313 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Deleting vault entry — entryId: [10]
+2026-03-11 00:15:05.314 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Vault entry deleted — entryId: [10]
+2026-03-11 00:15:05.314 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - PASS
+2026-03-11 00:15:05.317 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - TEST: output is Base64
+2026-03-11 00:15:05.317 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - PASS
+2026-03-11 00:15:05.318 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - TEST: different inputs ? different ciphertexts
+2026-03-11 00:15:05.318 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - PASS
+2026-03-11 00:15:05.320 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - TEST: ciphertext differs from plaintext
+2026-03-11 00:15:05.321 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - PASS
+2026-03-11 00:15:05.321 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - TEST: numeric password round trip
+2026-03-11 00:15:05.322 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - PASS
+2026-03-11 00:15:05.323 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - TEST: encrypt?decrypt round trip
+2026-03-11 00:15:05.323 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - PASS
+2026-03-11 00:15:05.324 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - TEST: same input ? same ciphertext (ECB determinism)
+2026-03-11 00:15:05.325 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - PASS
+2026-03-11 00:15:05.326 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - TEST: encrypt returns non-null, non-empty
+2026-03-11 00:15:05.326 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - PASS: encrypted=T/71ap8CcRqh9AlwMXrbaA==
+2026-03-11 00:15:05.328 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - TEST: special chars round trip
+2026-03-11 00:15:05.328 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - PASS
+2026-03-11 00:15:05.329 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - TEST: long password round trip
+2026-03-11 00:15:05.330 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - PASS
+2026-03-11 00:15:05.332 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - TEST: 'Hello123' ? Medium
+2026-03-11 00:15:05.333 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - PASS
+2026-03-11 00:15:05.334 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - TEST: 'abc' ? Weak
+2026-03-11 00:15:05.334 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - PASS
+2026-03-11 00:15:05.335 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - TEST: 'Hello@12' ? Strong
+2026-03-11 00:15:05.335 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - PASS
+2026-03-11 00:15:05.337 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - TEST: long complex password ? Very Strong
+2026-03-11 00:15:05.337 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - PASS
+2026-03-11 00:15:05.338 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - TEST: empty ? Weak
+2026-03-11 00:15:05.338 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - PASS
+2026-03-11 00:15:05.340 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - TEST: 'SecurePass@123' ? Very Strong
+2026-03-11 00:15:05.340 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - PASS
+2026-03-11 00:15:05.341 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - TEST: null ? Weak
+2026-03-11 00:15:05.342 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - PASS
+2026-03-11 00:15:05.342 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - TEST: 'abcdefgh' ? Weak
+2026-03-11 00:15:05.343 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - PASS
+2026-03-11 00:15:05.344 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - TEST: 'HelloWld' ? Medium
+2026-03-11 00:15:05.344 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - PASS
+2026-03-11 00:15:30.377 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-03-11 00:15:30.440 [restartedMain] INFO  com.revpasswordmanager.RevPasswordmanagerApplication - Starting RevPasswordmanagerApplication using Java 17.0.5 with PID 11476 (C:\Users\DELL HOME\Desktop\revPasswordmanager\revPasswordmanager\target\classes started by DELL HOME in C:\Users\DELL HOME\Desktop\revPasswordmanager\revPasswordmanager)
+2026-03-11 00:15:30.449 [restartedMain] INFO  com.revpasswordmanager.RevPasswordmanagerApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-11 00:15:30.550 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-11 00:15:30.550 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-11 00:15:32.029 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-11 00:15:32.147 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 98 ms. Found 7 JPA repository interfaces.
+2026-03-11 00:15:33.312 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 9095 (http)
+2026-03-11 00:15:33.340 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9095"]
+2026-03-11 00:15:33.343 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-11 00:15:33.344 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.52]
+2026-03-11 00:15:33.447 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-11 00:15:33.450 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2894 ms
+2026-03-11 00:15:33.774 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-11 00:15:33.901 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.42.Final
+2026-03-11 00:15:33.976 [restartedMain] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-11 00:15:34.465 [restartedMain] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-11 00:15:34.528 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-11 00:15:34.967 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3ee95b86
+2026-03-11 00:15:34.969 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-11 00:15:35.043 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-11 00:15:35.044 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-03-11 00:15:35.070 [restartedMain] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-11 00:15:36.430 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-11 00:15:36.552 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-11 00:15:37.287 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-11 00:15:37.349 [restartedMain] INFO  org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2026-03-11 00:15:37.478 [restartedMain] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2026-03-11 00:15:38.205 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-03-11 00:15:38.227 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9095"]
+2026-03-11 00:15:38.259 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 9095 (http) with context path '/'
+2026-03-11 00:15:38.276 [restartedMain] INFO  com.revpasswordmanager.RevPasswordmanagerApplication - Started RevPasswordmanagerApplication in 8.408 seconds (process running for 9.682)
+2026-03-11 00:15:53.198 [http-nio-9095-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-11 00:15:53.199 [http-nio-9095-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-11 00:15:53.201 [http-nio-9095-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-11 00:15:54.798 [http-nio-9095-exec-4] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-11 00:15:56.560 [http-nio-9095-exec-6] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-11 00:16:12.356 [http-nio-9095-exec-7] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Login attempt â€” username: [Naveenraj01]
+2026-03-11 00:16:12.887 [http-nio-9095-exec-7] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - 2FA required â€” generating verification code for userId: [1]
+2026-03-11 00:16:19.157 [http-nio-9095-exec-10] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-11 00:16:34.557 [http-nio-9095-exec-6] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Returned [10] vault entries for userId: [1]
+2026-03-11 00:16:34.732 [http-nio-9095-exec-7] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-11 00:16:36.814 [http-nio-9095-exec-9] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Returned [10] vault entries for userId: [1]
+2026-03-11 00:16:36.955 [http-nio-9095-exec-10] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-11 00:16:37.789 [http-nio-9095-exec-4] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Returned [10] vault entries for userId: [1]
+2026-03-11 00:16:37.886 [http-nio-9095-exec-5] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-11 00:16:40.613 [http-nio-9095-exec-7] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Returned [10] vault entries for userId: [1]
+2026-03-11 00:16:40.694 [http-nio-9095-exec-8] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-11 00:16:41.728 [http-nio-9095-exec-10] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-11 00:16:43.186 [http-nio-9095-exec-4] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-11 00:16:44.701 [http-nio-9095-exec-6] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-11 00:16:45.833 [http-nio-9095-exec-8] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-11 00:16:48.173 [http-nio-9095-exec-3] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Returned [10] vault entries for userId: [1]
+2026-03-11 00:16:48.279 [http-nio-9095-exec-1] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-11 00:17:00.858 [http-nio-9095-exec-5] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-11 00:19:56.915 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-03-11 00:19:57.000 [restartedMain] INFO  com.revpasswordmanager.RevPasswordmanagerApplication - Starting RevPasswordmanagerApplication using Java 17.0.5 with PID 14116 (C:\Users\DELL HOME\Desktop\revPasswordmanager\revPasswordmanager\target\classes started by DELL HOME in C:\Users\DELL HOME\Desktop\revPasswordmanager\revPasswordmanager)
+2026-03-11 00:19:57.013 [restartedMain] INFO  com.revpasswordmanager.RevPasswordmanagerApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-11 00:19:57.099 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-11 00:19:57.099 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-11 00:19:58.432 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-11 00:19:58.590 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 138 ms. Found 7 JPA repository interfaces.
+2026-03-11 00:20:00.597 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 9095 (http)
+2026-03-11 00:20:00.804 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9095"]
+2026-03-11 00:20:00.813 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-11 00:20:00.817 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.52]
+2026-03-11 00:20:01.282 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-11 00:20:01.296 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4183 ms
+2026-03-11 00:20:02.095 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-11 00:20:02.268 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.42.Final
+2026-03-11 00:20:02.351 [restartedMain] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-11 00:20:03.122 [restartedMain] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-11 00:20:03.221 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-11 00:20:04.021 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@71591a76
+2026-03-11 00:20:04.031 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-11 00:20:04.148 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-11 00:20:04.151 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-03-11 00:20:04.208 [restartedMain] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-11 00:20:06.485 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-11 00:20:06.666 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-11 00:20:07.674 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-11 00:20:07.745 [restartedMain] INFO  org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2026-03-11 00:20:07.924 [restartedMain] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2026-03-11 00:20:09.114 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-03-11 00:20:09.145 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9095"]
+2026-03-11 00:20:09.207 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 9095 (http) with context path '/'
+2026-03-11 00:20:09.241 [restartedMain] INFO  com.revpasswordmanager.RevPasswordmanagerApplication - Started RevPasswordmanagerApplication in 12.781 seconds (process running for 14.076)
+2026-03-11 00:20:09.378 [http-nio-9095-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-11 00:20:09.379 [http-nio-9095-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-11 00:20:09.383 [http-nio-9095-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2026-03-11 00:20:10.869 [http-nio-9095-exec-2] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-11 00:20:12.666 [http-nio-9095-exec-3] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-11 00:21:15.253 [http-nio-9095-exec-5] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-11 00:21:42.473 [http-nio-9095-exec-8] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-11 00:22:04.367 [http-nio-9095-exec-1] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-11 00:22:22.932 [http-nio-9095-exec-4] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-11 00:32:06.909 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-03-11 00:32:06.969 [restartedMain] INFO  com.revpasswordmanager.RevPasswordmanagerApplication - Starting RevPasswordmanagerApplication using Java 17.0.5 with PID 21236 (D:\RevPasswordManager\revPasswordmanager\revPasswordmanager\target\classes started by Dell in D:\RevPasswordManager\revPasswordmanager\revPasswordmanager)
+2026-03-11 00:32:06.981 [restartedMain] INFO  com.revpasswordmanager.RevPasswordmanagerApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-11 00:32:07.074 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-11 00:32:07.075 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-11 00:32:08.068 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-11 00:32:08.170 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 85 ms. Found 7 JPA repository interfaces.
+2026-03-11 00:32:08.935 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8147 (http)
+2026-03-11 00:32:08.952 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8147"]
+2026-03-11 00:32:08.955 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-11 00:32:08.956 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.52]
+2026-03-11 00:32:09.022 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-11 00:32:09.025 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1947 ms
+2026-03-11 00:32:09.295 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-11 00:32:09.378 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.42.Final
+2026-03-11 00:32:09.422 [restartedMain] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-11 00:32:09.911 [restartedMain] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-11 00:32:09.951 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-11 00:32:10.413 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@21a8f33c
+2026-03-11 00:32:10.416 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-11 00:32:10.509 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-11 00:32:10.511 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-03-11 00:32:10.560 [restartedMain] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-11 00:32:12.160 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-11 00:32:13.199 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-11 00:32:13.761 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-11 00:32:13.819 [restartedMain] INFO  org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2026-03-11 00:32:13.926 [restartedMain] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2026-03-11 00:32:14.515 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-03-11 00:32:14.831 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8147"]
+2026-03-11 00:32:14.917 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8147 (http) with context path '/'
+2026-03-11 00:32:14.967 [restartedMain] INFO  com.revpasswordmanager.RevPasswordmanagerApplication - Started RevPasswordmanagerApplication in 8.639 seconds (process running for 10.008)
+2026-03-11 00:32:26.752 [http-nio-8147-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-11 00:32:26.757 [http-nio-8147-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-11 00:32:26.764 [http-nio-8147-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2026-03-11 00:32:27.976 [http-nio-8147-exec-2] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-11 00:32:48.290 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-03-11 00:32:48.370 [restartedMain] INFO  com.revpasswordmanager.RevPasswordmanagerApplication - Starting RevPasswordmanagerApplication using Java 17.0.5 with PID 14464 (D:\RevPasswordManager\revPasswordmanager\revPasswordmanager\target\classes started by Dell in D:\RevPasswordManager\revPasswordmanager\revPasswordmanager)
+2026-03-11 00:32:48.388 [restartedMain] INFO  com.revpasswordmanager.RevPasswordmanagerApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-11 00:32:48.525 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-11 00:32:48.527 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-11 00:32:50.139 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-11 00:32:50.316 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 151 ms. Found 7 JPA repository interfaces.
+2026-03-11 00:32:51.763 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8147 (http)
+2026-03-11 00:32:51.791 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8147"]
+2026-03-11 00:32:51.800 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-11 00:32:51.801 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.52]
+2026-03-11 00:32:51.912 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-11 00:32:51.918 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3385 ms
+2026-03-11 00:32:52.290 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-11 00:32:52.421 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.42.Final
+2026-03-11 00:32:52.495 [restartedMain] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-11 00:32:53.077 [restartedMain] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-11 00:32:53.155 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-11 00:32:53.763 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34f5e46c
+2026-03-11 00:32:53.768 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-11 00:32:53.866 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-11 00:32:53.869 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-03-11 00:32:53.963 [restartedMain] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-11 00:32:55.920 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-11 00:32:56.239 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-11 00:32:57.155 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-11 00:32:57.243 [restartedMain] INFO  org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2026-03-11 00:32:57.410 [restartedMain] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2026-03-11 00:32:58.294 [restartedMain] WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2026-03-11 00:32:58.346 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8147"]
+2026-03-11 00:32:58.380 [restartedMain] WARN  org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-03-11 00:32:58.401 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-11 00:32:58.425 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-11 00:32:58.456 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-11 00:32:58.633 [restartedMain] INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-11 00:32:58.673 [restartedMain] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8147 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8147 or configure this application to listen on another port.
+
+2026-03-11 00:33:06.486 [http-nio-8147-exec-6] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-11 00:33:43.504 [main] INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.revpasswordmanager.RevPasswordmanagerApplicationTests]: RevPasswordmanagerApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-11 00:33:43.788 [main] INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.revpasswordmanager.RevPasswordmanagerApplicationTests]: RevPasswordmanagerApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-11 00:33:45.955 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - === Setting up SecurityControllerTest ===
+2026-03-11 00:33:45.956 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - TEST: getSecurityAudit_validUserId_returnsAuditReport
+2026-03-11 00:33:46.052 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - PASS: weak=3, reused=1, old=2
+2026-03-11 00:33:46.083 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - === Setting up SecurityControllerTest ===
+2026-03-11 00:33:46.084 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - TEST: verifyCode_invalidCode_returns400
+2026-03-11 00:33:46.085 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - PASS
+2026-03-11 00:33:46.101 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - === Setting up SecurityControllerTest ===
+2026-03-11 00:33:46.101 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - TEST: getSecurityQuestions_validUserId_returnsOkWithQuestions
+2026-03-11 00:33:46.103 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - PASS: 3 questions returned
+2026-03-11 00:33:46.128 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - === Setting up SecurityControllerTest ===
+2026-03-11 00:33:46.129 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - TEST: updateSecurityAnswer_validInput_returns200
+2026-03-11 00:33:46.134 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - PASS
+2026-03-11 00:33:46.181 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - === Setting up SecurityControllerTest ===
+2026-03-11 00:33:46.182 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - TEST: generateVerificationCode_validRequest_returnsCode
+2026-03-11 00:33:46.188 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - PASS: code returned in body
+2026-03-11 00:33:46.203 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - === Setting up SecurityControllerTest ===
+2026-03-11 00:33:46.204 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - TEST: updateSecurityAnswer_emptyAnswer_returns400
+2026-03-11 00:33:46.211 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - PASS
+2026-03-11 00:33:46.217 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - === Setting up SecurityControllerTest ===
+2026-03-11 00:33:46.217 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - TEST: verifyCode_validCode_returns200
+2026-03-11 00:33:46.218 [main] INFO  com.revpasswordmanager.controller.SecurityControllerTest - PASS
+2026-03-11 00:33:47.023 [main] INFO  com.revpasswordmanager.RevPasswordmanagerApplicationTests - TEST: Application context smoke test — PASS
+2026-03-11 00:33:47.565 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - === Setting up AuthServiceImplTest ===
+2026-03-11 00:33:47.567 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - TEST: registerUser_duplicateEmail_throwsException
+2026-03-11 00:33:47.570 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Registration attempt — username: [john_doe], email: [john@example.com]
+2026-03-11 00:33:47.589 [main] WARN  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Registration failed — email already exists: [john@example.com]
+2026-03-11 00:33:47.608 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - === Setting up AuthServiceImplTest ===
+2026-03-11 00:33:47.613 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - TEST: changeMasterPassword_wrongCurrent_throwsException
+2026-03-11 00:33:47.617 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Change master password request — username: [john_doe]
+2026-03-11 00:33:47.621 [main] WARN  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Change password failed — current password incorrect for username: [john_doe]
+2026-03-11 00:33:47.641 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - === Setting up AuthServiceImplTest ===
+2026-03-11 00:33:47.646 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - TEST: registerUser_passwordIsEncoded_notPlaintext
+2026-03-11 00:33:47.658 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Registration attempt — username: [john_doe], email: [john@example.com]
+2026-03-11 00:33:47.705 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Registration successful — userId: [100], username: [john_doe]
+2026-03-11 00:33:47.886 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - PASS
+2026-03-11 00:33:47.898 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - === Setting up AuthServiceImplTest ===
+2026-03-11 00:33:47.899 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - TEST: login_validCredentials_with2FA_returnsNegativeOne
+2026-03-11 00:33:47.902 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Login attempt — username: [john_doe]
+2026-03-11 00:33:47.903 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - 2FA required — generating verification code for userId: [100]
+2026-03-11 00:33:47.905 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - PASS: 2FA triggered, returned -1
+2026-03-11 00:33:47.914 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - === Setting up AuthServiceImplTest ===
+2026-03-11 00:33:47.915 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - TEST: changeMasterPassword_correctCurrent_updatesHash
+2026-03-11 00:33:47.916 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Change master password request — username: [john_doe]
+2026-03-11 00:33:47.917 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Master password changed successfully — username: [john_doe]
+2026-03-11 00:33:47.918 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - PASS
+2026-03-11 00:33:47.932 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - === Setting up AuthServiceImplTest ===
+2026-03-11 00:33:47.933 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - TEST: login_userNotFound_throwsException
+2026-03-11 00:33:47.938 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Login attempt — username: [ghost]
+2026-03-11 00:33:47.939 [main] WARN  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Login failed — user not found: [ghost]
+2026-03-11 00:33:47.987 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - === Setting up AuthServiceImplTest ===
+2026-03-11 00:33:47.987 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - TEST: registerUser_validData_savesUserAndQuestions
+2026-03-11 00:33:47.997 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Registration attempt — username: [john_doe], email: [john@example.com]
+2026-03-11 00:33:48.004 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Registration successful — userId: [100], username: [john_doe]
+2026-03-11 00:33:48.008 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - PASS
+2026-03-11 00:33:48.047 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - === Setting up AuthServiceImplTest ===
+2026-03-11 00:33:48.049 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - TEST: toggleTwoFactor_disable_setsFalse
+2026-03-11 00:33:48.051 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Toggle 2FA request — username: [john_doe], enable: [false]
+2026-03-11 00:33:48.053 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - 2FA status updated — username: [john_doe], twoFactorEnabled: [false]
+2026-03-11 00:33:48.054 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - PASS
+2026-03-11 00:33:48.068 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - === Setting up AuthServiceImplTest ===
+2026-03-11 00:33:48.069 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - TEST: login_validCredentials_no2FA_returnsUserId
+2026-03-11 00:33:48.072 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Login attempt — username: [john_doe]
+2026-03-11 00:33:48.074 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Login successful — userId: [100], username: [john_doe]
+2026-03-11 00:33:48.086 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - PASS: userId=100
+2026-03-11 00:33:48.103 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - === Setting up AuthServiceImplTest ===
+2026-03-11 00:33:48.104 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - TEST: login_wrongPassword_throwsException
+2026-03-11 00:33:48.105 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Login attempt — username: [john_doe]
+2026-03-11 00:33:48.107 [main] WARN  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Login failed — invalid password for username: [john_doe]
+2026-03-11 00:33:48.130 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - === Setting up AuthServiceImplTest ===
+2026-03-11 00:33:48.131 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - TEST: registerUser_duplicateUsername_throwsException
+2026-03-11 00:33:48.132 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Registration attempt — username: [john_doe], email: [john@example.com]
+2026-03-11 00:33:48.133 [main] WARN  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Registration failed — username already exists: [john_doe]
+2026-03-11 00:33:48.139 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - === Setting up AuthServiceImplTest ===
+2026-03-11 00:33:48.140 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - TEST: toggleTwoFactor_enable_setsTrue
+2026-03-11 00:33:48.140 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - Toggle 2FA request — username: [john_doe], enable: [true]
+2026-03-11 00:33:48.141 [main] INFO  com.revpasswordmanager.serviceimpl.AuthServiceImpl - 2FA status updated — username: [john_doe], twoFactorEnabled: [true]
+2026-03-11 00:33:48.141 [main] INFO  com.revpasswordmanager.service.AuthServiceImplTest - PASS
+2026-03-11 00:33:48.175 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - === Setting up PasswordGeneratorServiceImplTest ===
+2026-03-11 00:33:48.178 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - TEST: generatePassword_excludeSimilarChars_nonePresent
+2026-03-11 00:33:48.238 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [100], strength: [Very Strong]
+2026-03-11 00:33:48.254 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [100], strength: [Very Strong]
+2026-03-11 00:33:48.266 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [100], strength: [Very Strong]
+2026-03-11 00:33:48.281 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [100], strength: [Very Strong]
+2026-03-11 00:33:48.284 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [100], strength: [Very Strong]
+2026-03-11 00:33:48.300 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [100], strength: [Very Strong]
+2026-03-11 00:33:48.304 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [100], strength: [Very Strong]
+2026-03-11 00:33:48.306 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [100], strength: [Very Strong]
+2026-03-11 00:33:48.311 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [100], strength: [Very Strong]
+2026-03-11 00:33:48.323 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [100], strength: [Very Strong]
+2026-03-11 00:33:48.324 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - PASS: no similar chars in 10 passwords
+2026-03-11 00:33:48.329 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - === Setting up PasswordGeneratorServiceImplTest ===
+2026-03-11 00:33:48.329 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - TEST: generateMultiple_allUnique
+2026-03-11 00:33:48.329 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Generating [10] passwords — length: [20]
+2026-03-11 00:33:48.331 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [20], strength: [Very Strong]
+2026-03-11 00:33:48.334 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [20], strength: [Very Strong]
+2026-03-11 00:33:48.336 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [20], strength: [Very Strong]
+2026-03-11 00:33:48.338 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [20], strength: [Very Strong]
+2026-03-11 00:33:48.339 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [20], strength: [Very Strong]
+2026-03-11 00:33:48.345 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [20], strength: [Very Strong]
+2026-03-11 00:33:48.347 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [20], strength: [Very Strong]
+2026-03-11 00:33:48.348 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [20], strength: [Very Strong]
+2026-03-11 00:33:48.349 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [20], strength: [Very Strong]
+2026-03-11 00:33:48.350 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [20], strength: [Very Strong]
+2026-03-11 00:33:48.350 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - PASS
+2026-03-11 00:33:48.353 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - === Setting up PasswordGeneratorServiceImplTest ===
+2026-03-11 00:33:48.354 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - TEST: generatePassword_length64_exactLength
+2026-03-11 00:33:48.357 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [64], strength: [Very Strong]
+2026-03-11 00:33:48.358 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - PASS
+2026-03-11 00:33:48.362 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - === Setting up PasswordGeneratorServiceImplTest ===
+2026-03-11 00:33:48.363 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - TEST: checkStrength_medium_returnsMediumOrStrong
+2026-03-11 00:33:48.363 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - PASS: strength=Medium
+2026-03-11 00:33:48.385 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - === Setting up PasswordGeneratorServiceImplTest ===
+2026-03-11 00:33:48.386 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - TEST: generateMultiple_count5_returnsFive
+2026-03-11 00:33:48.386 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Generating [5] passwords — length: [16]
+2026-03-11 00:33:48.386 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [16], strength: [Very Strong]
+2026-03-11 00:33:48.386 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [16], strength: [Very Strong]
+2026-03-11 00:33:48.387 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [16], strength: [Very Strong]
+2026-03-11 00:33:48.387 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [16], strength: [Strong]
+2026-03-11 00:33:48.387 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [16], strength: [Very Strong]
+2026-03-11 00:33:48.389 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - PASS
+2026-03-11 00:33:48.390 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - === Setting up PasswordGeneratorServiceImplTest ===
+2026-03-11 00:33:48.392 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - TEST: generatePassword_numbersOnly_onlyDigits
+2026-03-11 00:33:48.392 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [16], strength: [Medium]
+2026-03-11 00:33:48.394 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - PASS
+2026-03-11 00:33:48.396 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - === Setting up PasswordGeneratorServiceImplTest ===
+2026-03-11 00:33:48.397 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - TEST: generatePassword_length8_exactLength
+2026-03-11 00:33:48.398 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [8], strength: [Strong]
+2026-03-11 00:33:48.398 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - PASS
+2026-03-11 00:33:48.401 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - === Setting up PasswordGeneratorServiceImplTest ===
+2026-03-11 00:33:48.401 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - TEST: generatePassword_noTypesSelected_throwsException
+2026-03-11 00:33:48.402 [main] WARN  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generation failed — no character types selected
+2026-03-11 00:33:48.403 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - === Setting up PasswordGeneratorServiceImplTest ===
+2026-03-11 00:33:48.403 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - TEST: checkStrength_null_returnsWeak
+2026-03-11 00:33:48.405 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - PASS
+2026-03-11 00:33:48.405 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - === Setting up PasswordGeneratorServiceImplTest ===
+2026-03-11 00:33:48.406 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - TEST: generatePassword_twoCalls_differentPasswords
+2026-03-11 00:33:48.406 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [20], strength: [Very Strong]
+2026-03-11 00:33:48.407 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [20], strength: [Very Strong]
+2026-03-11 00:33:48.407 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - PASS
+2026-03-11 00:33:48.408 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - === Setting up PasswordGeneratorServiceImplTest ===
+2026-03-11 00:33:48.409 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - TEST: checkStrength_simplePassword_weak
+2026-03-11 00:33:48.411 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - PASS
+2026-03-11 00:33:48.412 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - === Setting up PasswordGeneratorServiceImplTest ===
+2026-03-11 00:33:48.412 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - TEST: generatePassword_uppercaseOnly_onlyUppercase
+2026-03-11 00:33:48.413 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [20], strength: [Medium]
+2026-03-11 00:33:48.413 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - PASS: password=UQQJCNDSZWBLCVLBHIID
+2026-03-11 00:33:48.415 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - === Setting up PasswordGeneratorServiceImplTest ===
+2026-03-11 00:33:48.415 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - TEST: generatePassword_length12_exactLength
+2026-03-11 00:33:48.415 [main] INFO  com.revpasswordmanager.serviceimpl.PasswordGeneratorServiceImpl - Password generated — length: [12], strength: [Strong]
+2026-03-11 00:33:48.416 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - PASS: length=12
+2026-03-11 00:33:48.417 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - === Setting up PasswordGeneratorServiceImplTest ===
+2026-03-11 00:33:48.417 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - TEST: checkStrength_complexLong_strongOrVeryStrong
+2026-03-11 00:33:48.419 [main] INFO  com.revpasswordmanager.service.PasswordGeneratorServiceImplTest - PASS: strength=Very Strong
+2026-03-11 00:33:48.779 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - === Setting up VaultServiceImplTest ===
+2026-03-11 00:33:48.779 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - TEST: addVaultEntry_matchesMasterPassword_throwsException
+2026-03-11 00:33:48.781 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Adding vault entry — userId: [1], accountName: [Gmail]
+2026-03-11 00:33:48.782 [main] WARN  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Vault entry rejected — password matches master password for userId: [1]
+2026-03-11 00:33:48.786 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - === Setting up VaultServiceImplTest ===
+2026-03-11 00:33:48.786 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - TEST: addVaultEntry_validDTO_savesEntry
+2026-03-11 00:33:48.788 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Adding vault entry — userId: [1], accountName: [Gmail]
+2026-03-11 00:33:48.868 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Vault entry added successfully — userId: [1], account: [Gmail]
+2026-03-11 00:33:48.869 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - PASS
+2026-03-11 00:33:48.874 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - === Setting up VaultServiceImplTest ===
+2026-03-11 00:33:48.875 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - TEST: markAsFavorite_setsFalse
+2026-03-11 00:33:48.881 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Updating favorite status — entryId: [10], favorite: [false]
+2026-03-11 00:33:48.882 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Favorite status updated — entryId: [10], isFavorite: [false]
+2026-03-11 00:33:48.883 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - PASS
+2026-03-11 00:33:48.889 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - === Setting up VaultServiceImplTest ===
+2026-03-11 00:33:48.890 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - TEST: addVaultEntry_tooShortPassword_throwsException
+2026-03-11 00:33:48.890 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Adding vault entry — userId: [1], accountName: [Gmail]
+2026-03-11 00:33:48.891 [main] WARN  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Vault entry rejected — password too short (length: 3)
+2026-03-11 00:33:48.897 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - === Setting up VaultServiceImplTest ===
+2026-03-11 00:33:48.898 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - TEST: getAllEntries_twoEntries_returnsTwo
+2026-03-11 00:33:48.914 [main] ERROR com.revpasswordmanager.serviceimpl.VaultServiceImpl - Decryption failed for entryId: [null] — returning raw value
+2026-03-11 00:33:48.915 [main] ERROR com.revpasswordmanager.serviceimpl.VaultServiceImpl - Decryption failed for entryId: [null] — returning raw value
+2026-03-11 00:33:48.915 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Returned [2] vault entries for userId: [1]
+2026-03-11 00:33:48.915 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - PASS: 2 entries returned
+2026-03-11 00:33:48.921 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - === Setting up VaultServiceImplTest ===
+2026-03-11 00:33:48.921 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - TEST: addVaultEntry_duplicateEntry_throwsException
+2026-03-11 00:33:48.923 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Adding vault entry — userId: [1], accountName: [Gmail]
+2026-03-11 00:33:48.924 [main] WARN  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Duplicate vault entry blocked — userId: [1], account: [Gmail], username: [john@gmail.com]
+2026-03-11 00:33:48.945 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - === Setting up VaultServiceImplTest ===
+2026-03-11 00:33:48.945 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - TEST: markAsFavorite_invalidId_throwsException
+2026-03-11 00:33:48.946 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Updating favorite status — entryId: [999], favorite: [true]
+2026-03-11 00:33:48.946 [main] ERROR com.revpasswordmanager.serviceimpl.VaultServiceImpl - Favorite update failed — entry not found: [999]
+2026-03-11 00:33:48.952 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - === Setting up VaultServiceImplTest ===
+2026-03-11 00:33:48.953 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - TEST: getAllEntries_noEntries_returnsEmptyList
+2026-03-11 00:33:48.954 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Returned [0] vault entries for userId: [99]
+2026-03-11 00:33:48.954 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - PASS
+2026-03-11 00:33:48.962 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - === Setting up VaultServiceImplTest ===
+2026-03-11 00:33:48.963 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - TEST: addVaultEntry_emptyPassword_throwsException
+2026-03-11 00:33:48.963 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Adding vault entry — userId: [1], accountName: [Gmail]
+2026-03-11 00:33:48.963 [main] WARN  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Vault entry rejected — password is empty
+2026-03-11 00:33:48.972 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - === Setting up VaultServiceImplTest ===
+2026-03-11 00:33:48.972 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - TEST: markAsFavorite_setsTrue
+2026-03-11 00:33:48.973 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Updating favorite status — entryId: [10], favorite: [true]
+2026-03-11 00:33:48.974 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Favorite status updated — entryId: [10], isFavorite: [true]
+2026-03-11 00:33:48.974 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - PASS
+2026-03-11 00:33:48.985 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - === Setting up VaultServiceImplTest ===
+2026-03-11 00:33:48.985 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - TEST: getFavoriteEntries_hasFavorites_returnsOne
+2026-03-11 00:33:48.990 [main] ERROR com.revpasswordmanager.serviceimpl.VaultServiceImpl - Decryption failed for entryId: [null] — returning raw value
+2026-03-11 00:33:48.990 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Returned [1] favorite entries for userId: [1]
+2026-03-11 00:33:48.991 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - PASS
+2026-03-11 00:33:48.999 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - === Setting up VaultServiceImplTest ===
+2026-03-11 00:33:49.000 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - TEST: deleteVaultEntry_validId_callsRepository
+2026-03-11 00:33:49.002 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Deleting vault entry — entryId: [10]
+2026-03-11 00:33:49.004 [main] INFO  com.revpasswordmanager.serviceimpl.VaultServiceImpl - Vault entry deleted — entryId: [10]
+2026-03-11 00:33:49.004 [main] INFO  com.revpasswordmanager.service.VaultServiceImplTest - PASS
+2026-03-11 00:33:49.020 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - TEST: output is Base64
+2026-03-11 00:33:49.023 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - PASS
+2026-03-11 00:33:49.025 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - TEST: different inputs ? different ciphertexts
+2026-03-11 00:33:49.026 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - PASS
+2026-03-11 00:33:49.028 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - TEST: ciphertext differs from plaintext
+2026-03-11 00:33:49.030 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - PASS
+2026-03-11 00:33:49.032 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - TEST: numeric password round trip
+2026-03-11 00:33:49.033 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - PASS
+2026-03-11 00:33:49.034 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - TEST: encrypt?decrypt round trip
+2026-03-11 00:33:49.035 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - PASS
+2026-03-11 00:33:49.036 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - TEST: same input ? same ciphertext (ECB determinism)
+2026-03-11 00:33:49.037 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - PASS
+2026-03-11 00:33:49.038 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - TEST: encrypt returns non-null, non-empty
+2026-03-11 00:33:49.039 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - PASS: encrypted=T/71ap8CcRqh9AlwMXrbaA==
+2026-03-11 00:33:49.055 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - TEST: special chars round trip
+2026-03-11 00:33:49.056 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - PASS
+2026-03-11 00:33:49.057 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - TEST: long password round trip
+2026-03-11 00:33:49.058 [main] INFO  com.revpasswordmanager.util.EncryptionUtilTest - PASS
+2026-03-11 00:33:49.064 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - TEST: 'Hello123' ? Medium
+2026-03-11 00:33:49.065 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - PASS
+2026-03-11 00:33:49.068 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - TEST: 'abc' ? Weak
+2026-03-11 00:33:49.068 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - PASS
+2026-03-11 00:33:49.070 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - TEST: 'Hello@12' ? Strong
+2026-03-11 00:33:49.070 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - PASS
+2026-03-11 00:33:49.071 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - TEST: long complex password ? Very Strong
+2026-03-11 00:33:49.072 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - PASS
+2026-03-11 00:33:49.073 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - TEST: empty ? Weak
+2026-03-11 00:33:49.073 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - PASS
+2026-03-11 00:33:49.073 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - TEST: 'SecurePass@123' ? Very Strong
+2026-03-11 00:33:49.074 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - PASS
+2026-03-11 00:33:49.078 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - TEST: null ? Weak
+2026-03-11 00:33:49.078 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - PASS
+2026-03-11 00:33:49.079 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - TEST: 'abcdefgh' ? Weak
+2026-03-11 00:33:49.080 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - PASS
+2026-03-11 00:33:49.081 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - TEST: 'HelloWld' ? Medium
+2026-03-11 00:33:49.081 [main] INFO  com.revpasswordmanager.util.PasswordStrengthUtilTest - PASS
+2026-03-11 11:06:32.702 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-03-11 11:06:32.880 [restartedMain] INFO  com.revpasswordmanager.RevPasswordmanagerApplication - Starting RevPasswordmanagerApplication using Java 17.0.5 with PID 8788 (D:\RevPasswordManager\revPasswordmanager\revPasswordmanager\target\classes started by Dell in D:\RevPasswordManager\revPasswordmanager\revPasswordmanager)
+2026-03-11 11:06:32.907 [restartedMain] INFO  com.revpasswordmanager.RevPasswordmanagerApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-11 11:06:34.155 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-11 11:06:34.155 [restartedMain] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-11 11:06:37.684 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-11 11:06:38.187 [restartedMain] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 447 ms. Found 7 JPA repository interfaces.
+2026-03-11 11:06:40.747 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8147 (http)
+2026-03-11 11:06:40.787 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8147"]
+2026-03-11 11:06:40.795 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-11 11:06:40.796 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.52]
+2026-03-11 11:06:40.945 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-11 11:06:40.952 [restartedMain] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6790 ms
+2026-03-11 11:06:41.538 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-11 11:06:41.761 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.42.Final
+2026-03-11 11:06:41.874 [restartedMain] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-11 11:06:42.846 [restartedMain] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-11 11:06:43.020 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-11 11:06:44.198 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@570a40a0
+2026-03-11 11:06:44.205 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-11 11:06:44.470 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-11 11:06:44.486 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-03-11 11:06:44.555 [restartedMain] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-11 11:06:48.100 [restartedMain] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-11 11:06:48.528 [restartedMain] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-11 11:06:50.405 [restartedMain] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-11 11:06:50.556 [restartedMain] INFO  org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userServiceImpl
+2026-03-11 11:06:50.876 [restartedMain] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2026-03-11 11:06:53.081 [restartedMain] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2026-03-11 11:06:53.161 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8147"]
+2026-03-11 11:06:53.246 [restartedMain] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8147 (http) with context path '/'
+2026-03-11 11:06:53.275 [restartedMain] INFO  com.revpasswordmanager.RevPasswordmanagerApplication - Started RevPasswordmanagerApplication in 21.588 seconds (process running for 24.574)
+2026-03-11 11:11:10.566 [http-nio-8147-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-11 11:11:10.567 [http-nio-8147-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-11 11:11:10.571 [http-nio-8147-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-03-11 11:11:11.752 [http-nio-8147-exec-2] WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2026-03-11 16:16:47.163 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5h2s713ms484Âµs).
+2026-03-11 21:05:05.331 [HikariPool-1:housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4h48m22s463ms102Âµs600ns).
