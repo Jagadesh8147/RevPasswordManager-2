@@ -76,25 +76,40 @@ This project demonstrates **enterprise-level backend architecture, security best
 
 # 🏗 System Architecture
 
-```mermaid
-graph TD
+The following diagram illustrates the layered architecture of **RevPasswordManager**, including the presentation layer, security layer, controllers, services, repositories, and database.
 
-User --> Browser
-Browser --> Controller
-Controller --> Service
-Service --> Repository
-Repository --> Database
-
-Controller --> ThymeleafTemplates
-ThymeleafTemplates --> Browser
-```
+<p align="center">
+<img src="RevPM_Architecture_Diagram.jpg" width="100%">
+</p>
 
 Architecture Layers:
 
+* Presentation Layer (Thymeleaf UI)
+* Spring Security Layer
 * Controller Layer
 * Service Layer
 * Repository Layer
 * Database Layer
+
+---
+
+# 🗄 Database ER Diagram
+
+The following Entity Relationship Diagram shows how the database entities interact with each other.
+
+<p align="center">
+<img src="ER_Diagram_RevPasswordManager.png" width="100%">
+</p>
+
+### Main Entities
+
+* Users
+* Vault Entry
+* Security Question
+* Verification Code
+* Backup File
+* Security Audit Report
+* Category
 
 ---
 
@@ -122,13 +137,12 @@ RevPasswordManager
 
 ---
 
-
 # ⚙ Installation & Setup
 
 ## Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/RevPasswordManager-2.git
+git clone https://github.com/Jagadesh8147/RevPasswordManager-2.git
 ```
 
 ## Navigate to the Project
@@ -186,7 +200,6 @@ http://localhost:8147
 **Jagadesh Sai**
 
 Java Full Stack Developer
-
 
 ---
 
