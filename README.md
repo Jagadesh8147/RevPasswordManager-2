@@ -171,14 +171,6 @@ http://localhost:8147
 
 ---
 
-# 📊 GitHub Stats
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=yourusername\&show_icons=true\&theme=tokyonight)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=yourusername\&layout=compact\&theme=tokyonight)
-
----
-
 # 🚀 Future Enhancements
 
 * Password Strength Meter
@@ -195,7 +187,6 @@ http://localhost:8147
 
 Java Full Stack Developer
 
-GitHub: https://github.com/yourusername
 
 ---
 
